@@ -1,10 +1,9 @@
 import React from "react";
-import Link from "next/link";
 
-export default function Home() {
+export default function Resume() {
   return (
     <div className="bg-white h-screen">
-      <p>home page</p>
+      <div className="text-black">testing</div>
     </div>
   );
 }
