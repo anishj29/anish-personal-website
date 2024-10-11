@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Anish Jha Personal Website",
+  title: "Anish Jha's Personal Website",
   description: "",
 };
 

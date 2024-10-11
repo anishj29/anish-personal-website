@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #e3e1e1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground: #ededed;
+    --foreground: #f0ebeb;
   }
 }
 
@@ -22,4 +22,18 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.anish-logo {
+  height: 200px;
+}
+.experience-box{
+  border: #000 solid 2px;
+  margin-top: 1rem;
+  padding: 30px;
+}
+.education-box{
+  border: #fff solid 2px;
+  margin-top: 1rem;
+  padding: 30px;
 }
