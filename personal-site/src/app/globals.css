@@ -64,3 +64,29 @@ body {
   margin-top: 1rem;
   padding: 30px;
 }
+
+.project-box {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-box:hover {
+  transform: scale(1.03);
+  background-color: #e0e0e0;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+}

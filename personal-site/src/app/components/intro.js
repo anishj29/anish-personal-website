@@ -23,7 +23,7 @@ export default function Intro() {
         </div>
         <div className="align-middle text-left">
           <p>I’m a Computer Science and Data Science student at Rutgers, with a minor in Business Administration, and posessing strong skills in Python, JavaScript, Vue.js, and React.js. My experience includes working as a Frontend Web Developer at Movement Labs, where I enhanced the UI for blockchain partners, and as Chief Technology Officer at Vact, leading the development of mobile app features. In addition, I’ve worked on client projects through Fiverr, creating coding prep platforms and AI-integrated book catalogs.</p>
-          <p className="mt-2">Outside of my technical work, I’m actively involved in extracurriculars like Rutgers' Mobile App Development club and the Competitive Programming group, both of which help sharpen my problem-solving abilities. I’m also passionate about hackathons, and my team even won first place at the 2024 HackRU Hackathon. In my free time, I love diving into personal projects and always look for new ways to grow my technical skills.</p>
+          <p className="mt-2">Outside of my technical work, I’m actively involved in extracurriculars like Rutgers Mobile App Development club and the Competitive Programming group, both of which help sharpen my problem-solving abilities. I’m also passionate about hackathons, and my team even won first place at the 2024 HackRU Hackathon. In my free time, I love diving into personal projects and always look for new ways to grow my technical skills.</p>
         </div>
       </div>
     </div>
