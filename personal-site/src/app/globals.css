@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #e3e1e1;
+  --background: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,14 +23,41 @@ body {
     text-wrap: balance;
   }
 }
-
+.main-img {
+  background-image: url('turquoise-ocean-watercolor-texture-background.jpg');
+}
 .anish-logo {
+  width: 200px;
   height: 200px;
 }
+.experience-container {
+  padding-left: 350px;
+  padding-right: 350px;
+}
+.experience-container h1 {
+  font-weight: 600;
+}
+.experience-container ul {
+  padding-left: 35px;
+}
+.education-container {
+  padding-left: 350px;
+  padding-right: 350px;
+}
+.projects-container {
+  padding-left: 350px;
+  padding-right: 350px;
+}
+.education-container h1 {
+  font-weight: 600;
+}
 .experience-box{
-  border: #000 solid 2px;
+  border: #a0a0a0 solid 2px;
   margin-top: 1rem;
   padding: 30px;
+}
+.experience-box h3{
+  font-weight: 600;
 }
 .education-box{
   border: #fff solid 2px;
