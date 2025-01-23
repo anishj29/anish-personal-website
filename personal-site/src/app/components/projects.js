@@ -1,3 +1,4 @@
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 const projects = [
   {
@@ -5,6 +6,7 @@ const projects = [
     description: "My personal website built from scratch using React JS, Next JS, and Tailwind CSS.",
     techStack: "React.js, Next.js, Tailwind CSS",
     url: "https://github.com/anishj29/anish-personal-website",
+    component: AttachMoneyIcon
 
   },
   {
@@ -35,11 +37,12 @@ export default function Projects() {
       <h1 className="text-3xl font-bold">Projects</h1>
       <h4 className="">Click on any project to learn more</h4>
 
-      <div class="mt-10 grid grid-rows-2 flex justify-items-center align-center grid-flow-col gap-4">
+      <div className="mt-10 grid grid-rows-2 flex justify-items-center align-center grid-flow-col gap-4">
         {projects.map((project, index) => (
           <a key={index} href={project.url}
           target="_blank"
           rel="noopener noreferrer" className="project-box flex flex-col justify-items-center align-middle">
+            {/* <project.component /> */}
             <h3>{project.name}</h3>
             <p>{project.description}</p>
             <p>

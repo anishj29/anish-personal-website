@@ -1,4 +1,3 @@
-
 export default function Experience() {
   return (
     <div className="pt-20 pb-10 experience-container bg-white">
@@ -20,8 +19,8 @@ export default function Experience() {
               <h3 class="text-lg font-semibold text-gray-900 dark:text-black mb-0">Movement Labs</h3>
               <h3 class="text-xs font-semibold font-sans text-gray-800 dark:text-gray-600 mb-4">Frontend Web Developer Intern</h3>
               <ul class="list-disc text">
-                <li>Developed new pages and implemented design/migration changes for their blockchain partners using React JS,
-                Tailwind, and Ethers API</li>
+                <li>Collaborated with CEO of DeFi protocol Axial to revamp existing frontend platform using React JS, Tailwind CSS, and
+                Ethereum API for integration into Movement Lab’s modular blockchain framework</li>
               </ul>
           </li>
           <li class="mb-10 ms-4 experience-box">

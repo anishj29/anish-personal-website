@@ -5,7 +5,7 @@ export default function Intro() {
     <div className='footer flex justify-center bg-white mt-40 pb-40 w-full experience-container'>
       <div className="text-black text-center flex flex-row mt-40">
         <div className="flex text-left flex-col mr-10">
-          <h1 className="">Name: Anish Jha</h1>
+          <h2 className="">Name: Anish Jha</h2>
           <hr class="my-2 h-0.5 border-t-0 bg-neutral-100 dark:bg-black/5" />
           <h4 className=""> Email: <a className="text-sky-600	" target='_blank'
             rel='noopener noreferrer' href="mailto:anishj2900@gmail.com">anishj2900@gmail.com</a> </h4>

@@ -23,8 +23,12 @@ body {
     text-wrap: balance;
   }
 }
-.main-img {
-  background-image: url('turquoise-ocean-watercolor-texture-background.jpg');
+.landingImage{
+  z-index: -1;
+} 
+.landingDiv {
+  z-index: 1;
+  position: relative;
 }
 .anish-logo {
   width: 200px;
