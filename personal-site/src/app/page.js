@@ -20,7 +20,7 @@ export default function Home() {
       />
 
       <div className="absolute inset-0 flex items-center justify-center landingDiv">
-        <div className="text-black text-center flex flex-row mt-40">
+        <div className="text-black text-center flex flex-row mt-40 mb-40">
           <div className="flex text-left flex-col mr-10">
             <img
               className="anish-logo"
