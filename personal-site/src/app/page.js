@@ -6,6 +6,8 @@ import Projects from "./components/projects";
 import Footer from "./components/footer";
 import Image from 'next/image'
 import turquoiseBG from './turquoise-ocean-watercolor-texture-background.jpg'
+import { VoiceChat } from "@mui/icons-material";
+import Volunteer from "./components/volunteer";
 
 export default function Home() {
   return (
@@ -16,7 +18,7 @@ export default function Home() {
         alt="Picture of the author"
         placeholder="blur"
         quality={100}
-        layout="fill" // Makes the image fill the container
+        fill={true} // Makes the image fill the container
       />
 
       <div className="absolute inset-0 flex items-center justify-center landingDiv">
@@ -38,9 +40,9 @@ export default function Home() {
       <Intro />
       <Education />
       <Experience />
+      <Volunteer />
       <Projects />
       <Footer />
-
     </div>
   );
 }

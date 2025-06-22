@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "period": "September 2023 - Present",
+    "institution": "Rutgers University-New Brunswick",
+    "degree": "BSc Degree",
+    "majors": ["Computer Science"],
+    "minors": ["Business Administration", "Data Science"],
+    "relevantCoursework": ["Calculus 1", "Data Structures", "Data 101", "Intro to Linear Algebra", "Intro to Financial Accounting"],
+    "awardsAndActivities": ["Dean's List", "RU MAD", "RU BITS", "Rutgers Competitive Programming"],
+    "color": "blue"
+  },
+  {
+    "id": 2,
+    "period": "September 2019 - June 2023",
+    "institution": "West-Windsor Plainsboro High School South",
+    "degree": "High School Degree",
+    "relevantCoursework": ["AP Computer Science A", "Advanced Topics (Data Structures)", "AP Microeconomics", "AP Spanish Language and Culture (Seal of Biliteracy Recipient)"],
+    "color": "indigo"
+  }
+] 

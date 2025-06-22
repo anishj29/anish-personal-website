@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
+import experienceData from '../data/experience.json';
 
 export default function Experience() {
   useEffect(() => {
@@ -24,139 +25,137 @@ export default function Experience() {
     };
   }, []);
 
+  const getColorClasses = (color) => {
+    const colorMap = {
+      blue: {
+        bg: 'from-blue-500 to-cyan-500',
+        text: 'text-blue-300',
+        textLight: 'text-blue-200',
+        border: 'border-blue-400/30',
+        bgLight: 'bg-blue-500/20',
+        dot: 'bg-blue-400',
+        shadow: 'hover:shadow-blue-500/25'
+      },
+      green: {
+        bg: 'from-green-500 to-emerald-500',
+        text: 'text-green-300',
+        textLight: 'text-green-200',
+        border: 'border-green-400/30',
+        bgLight: 'bg-green-500/20',
+        dot: 'bg-green-400',
+        shadow: 'hover:shadow-green-500/25'
+      },
+      red: {
+        bg: 'from-red-500 to-pink-500',
+        text: 'text-red-300',
+        textLight: 'text-red-200',
+        border: 'border-red-400/30',
+        bgLight: 'bg-red-500/20',
+        dot: 'bg-red-400',
+        shadow: 'hover:shadow-red-500/25'
+      },
+      purple: {
+        bg: 'from-purple-500 to-violet-500',
+        text: 'text-purple-300',
+        textLight: 'text-purple-200',
+        border: 'border-purple-400/30',
+        bgLight: 'bg-purple-500/20',
+        dot: 'bg-purple-400',
+        shadow: 'hover:shadow-purple-500/25'
+      },
+      yellow: {
+        bg: 'from-yellow-500 to-orange-500',
+        text: 'text-yellow-300',
+        textLight: 'text-yellow-200',
+        border: 'border-yellow-400/30',
+        bgLight: 'bg-yellow-500/20',
+        dot: 'bg-yellow-400',
+        shadow: 'hover:shadow-yellow-500/25'
+      },
+      indigo: {
+        bg: 'from-indigo-500 to-blue-500',
+        text: 'text-indigo-300',
+        textLight: 'text-indigo-200',
+        border: 'border-indigo-400/30',
+        bgLight: 'bg-indigo-500/20',
+        dot: 'bg-indigo-400',
+        shadow: 'hover:shadow-indigo-500/25'
+      }
+    };
+    return colorMap[color] || colorMap.blue;
+  };
+
   return (
-    <div className="pt-20 pb-10 experience-container bg-gray-50 dark:bg-gray-900">
-      <h1 className="text-4xl font-bold text-center mb-10 text-gray-800 dark:text-gray-200">
-        My Experience
-      </h1>
-      <ol className="relative border-l border-gray-300 dark:border-gray-700">
-        <li className="mb-10 ml-6 experience-box bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border-l-4 border-blue-500 transition-all duration-500">
-          <div className="absolute -left-3 top-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
-          <time className="mb-1 text-sm font-medium text-gray-500 dark:text-gray-400">
-            May 2024 - September 2024
-          </time>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-            Nao Now
-          </h3>
-          <h4 className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-4">
-            Operations Intern
-          </h4>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-            <li>
-              Migrated startup from Monday.com to ClickUp, improving workflows for marketing, sales,
-              operations, and HR with automation and integrations.
-            </li>
-          </ul>
-        </li>
-
-        <li className="mb-10 ml-6 experience-box bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border-l-4 border-green-500 transition-all duration-500">
-          <div className="absolute -left-3 top-3 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-gray-900"></div>
-          <time className="mb-1 text-sm font-medium text-gray-500 dark:text-gray-400">
-            June 2024 - August 2024
-          </time>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-            Movement Labs
-          </h3>
-          <h4 className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-4">
-            Frontend Web Developer Intern
-          </h4>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-            <li>
-              Collaborated with the CEO of Axial to revamp the frontend using React, Tailwind CSS,
-              and Ethereum API for integration into a modular blockchain framework.
-            </li>
-          </ul>
-        </li>
-
-        <li className="mb-10 ml-6 experience-box bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border-l-4 border-red-500 transition-all duration-500">
-          <div className="absolute -left-3 top-3 w-6 h-6 bg-red-500 rounded-full border-4 border-white dark:border-gray-900"></div>
-          <time className="mb-1 text-sm font-medium text-gray-500 dark:text-gray-400">
-            December 2021 - May 2024
-          </time>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Fiverr</h3>
-          <h4 className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-4">
-            Full-Stack Freelance Web Developer
-          </h4>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-            <li>
-              Developed university-level projects including a book catalog and coding prep platform
-              using Vue.js, JavaScript, HTML, and CSS.
-            </li>
-            <li>
-              Researched and applied effective marketing strategies to secure project requests.
-            </li>
-          </ul>
-        </li>
-
-        <li className="mb-10 ml-6 experience-box bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border-l-4 border-purple-500 transition-all duration-500">
-          <div className="absolute -left-3 top-3 w-6 h-6 bg-purple-500 rounded-full border-4 border-white dark:border-gray-900"></div>
-          <time className="mb-1 text-sm font-medium text-gray-500 dark:text-gray-400">
-            September 2020 - Present
-          </time>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-            Snuggles for Children
-          </h3>
-          <h4 className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-4">
-            Director of Technology and Policy
-          </h4>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-            <li>
-              Built a donation website using Squarespace, CSS, and HTML to support initiatives such as
-              sending care packages, distributing books and clothes, and awarding college scholarships.
-            </li>
-            <li>
-              Increased website traffic by 300% via the Google Ad Grant program, winning $120,000 in ad
-              credits.
-            </li>
-          </ul>
-        </li>
-
-        <li className="mb-10 ml-6 experience-box bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border-l-4 border-yellow-500 transition-all duration-500">
-          <div className="absolute -left-3 top-3 w-6 h-6 bg-yellow-500 rounded-full border-4 border-white dark:border-gray-900"></div>
-          <time className="mb-1 text-sm font-medium text-gray-500 dark:text-gray-400">
-            January 2022 - December 2022
-          </time>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Vact</h3>
-          <h4 className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-4">
-            Chief Technology Officer
-          </h4>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-            <li>
-              Developed new features for Android and iOS using Dart, Flutter, and AWS.
-            </li>
-            <li>
-              Modernized website design using Wordpress and created marketing visuals with Figma.
-            </li>
-          </ul>
-        </li>
-
-        <li className="mb-10 ml-6 experience-box bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border-l-4 border-indigo-500 transition-all duration-500">
-          <div className="absolute -left-3 top-3 w-6 h-6 bg-indigo-500 rounded-full border-4 border-white dark:border-gray-900"></div>
-          <time className="mb-1 text-sm font-medium text-gray-500 dark:text-gray-400">
-            November 2020 - May 2021
-          </time>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-            Ensemble Education
-          </h3>
-          <h4 className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-4">
-            Frontend Web Developer
-          </h4>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
-            <li>
-              Developed an AI-based test prep website for international exams like the SAT and ACT.
-            </li>
-            <li>
-              Collaborated on product design and helped implement an adaptive AI algorithm for personalized test questions.
-            </li>
-            <li>
-              Utilized a tech stack including Vue.js, HTML, CSS, Tailwind, Python, and Postman.
-            </li>
-            <li>
-              Designed wireframes and testing protocols with Figma and Postman.
-            </li>
-          </ul>
-        </li>
-      </ol>
+    <div className="pt-24 pb-24 experience-container w-full bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+      
+      <div className="relative w-full px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-20">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
+            Work Experience
+          </h1>
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto">
+          {/* Timeline line */}
+          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 rounded-full"></div>
+          
+          <div className="space-y-12">
+            {experienceData.map((experience, index) => {
+              const colors = getColorClasses(experience.color);
+              return (
+                <div 
+                  key={experience.id}
+                  className={`experience-box relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 ml-16 transform transition-all duration-700 hover:scale-105 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl ${colors.shadow}`}
+                >
+                  <div className={`absolute -left-12 top-8 w-8 h-8 bg-gradient-to-r ${colors.bg} rounded-full border-4 border-white shadow-lg`}></div>
+                  
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                      <time className={`text-sm font-semibold ${colors.text} uppercase tracking-wide`}>
+                        {experience.period}
+                      </time>
+                      <h3 className="text-2xl font-bold text-white mt-1">{experience.company}</h3>
+                      <h4 className={`text-lg font-medium ${colors.textLight}`}>{experience.position}</h4>
+                    </div>
+                    <div className="mt-4 md:mt-0">
+                      <span className={`inline-block px-4 py-2 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-sm font-medium`}>
+                        {experience.category}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-3 text-gray-200 leading-relaxed">
+                    <li className="flex items-start gap-3">
+                      <div className={`w-2 h-2 ${colors.dot} rounded-full mt-2 flex-shrink-0`}></div>
+                      <span>{experience.description}</span>
+                    </li>
+                    {experience.additionalDescription && (
+                      <li className="flex items-start gap-3">
+                        <div className={`w-2 h-2 ${colors.dot} rounded-full mt-2 flex-shrink-0`}></div>
+                        <span>{experience.additionalDescription}</span>
+                      </li>
+                    )}
+                    {experience.thirdDescription && (
+                      <li className="flex items-start gap-3">
+                        <div className={`w-2 h-2 ${colors.dot} rounded-full mt-2 flex-shrink-0`}></div>
+                        <span>{experience.thirdDescription}</span>
+                      </li>
+                    )}
+                    {experience.fourthDescription && (
+                      <li className="flex items-start gap-3">
+                        <div className={`w-2 h-2 ${colors.dot} rounded-full mt-2 flex-shrink-0`}></div>
+                        <span>{experience.fourthDescription}</span>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

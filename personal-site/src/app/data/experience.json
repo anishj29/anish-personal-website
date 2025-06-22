@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "period": "June 2025 - Present",
+    "company": "PSEG",
+    "position": "IT Utilities Technology Operations Intern",
+    "description": "Managing and analyzing large operational and non-operational PI data sets for electric plant assets by creating 1,000+ PI tags and leveraging Python, SQL, internal AI tools, and LLMs for automated reporting, data validation, and system testing.",
+    "color": "blue",
+    "category": "Backend"
+  },
+  {
+    "id": 2,
+    "period": "May 2024 - September 2024",
+    "company": "Nao Now",
+    "position": "Operations Intern",
+    "description": "Migrated startup from Monday.com to ClickUp, improving workflows for marketing, sales, operations, and HR with automation and integrations.",
+    "color": "blue",
+    "category": "Operations"
+  },
+  {
+    "id": 3,
+    "period": "June 2024 - August 2024",
+    "company": "Movement Labs",
+    "position": "Frontend Web Developer Intern",
+    "description": "Collaborated with the CEO of Axial to revamp the frontend using React, Tailwind CSS, and Ethereum API for integration into a modular blockchain framework.",
+    "color": "green",
+    "category": "Frontend"
+  },
+  {
+    "id": 4,
+    "period": "December 2021 - May 2024",
+    "company": "Fiverr",
+    "position": "Full-Stack Freelance Web Developer",
+    "description": "Developed university-level projects including a book catalog and coding prep platform using Vue.js, JavaScript, HTML, and CSS.",
+    "additionalDescription": "Researched and applied effective marketing strategies to secure project requests.",
+    "color": "red",
+    "category": "Full-Stack"
+  },
+  {
+    "id": 5,
+    "period": "January 2022 - December 2022",
+    "company": "Vact",
+    "position": "Chief Technology Officer",
+    "description": "Developed new features for Android and iOS using Dart, Flutter, and AWS.",
+    "additionalDescription": "Modernized website design using Wordpress and created marketing visuals with Figma.",
+    "color": "yellow",
+    "category": "CTO"
+  },
+  {
+    "id": 6,
+    "period": "November 2020 - May 2021",
+    "company": "Ensemble Education",
+    "position": "Frontend Web Developer",
+    "description": "Developed an AI-based test prep website for international exams like the SAT and ACT.",
+    "additionalDescription": "Collaborated on product design and helped implement an adaptive AI algorithm for personalized test questions.",
+    "thirdDescription": "Utilized a tech stack including Vue.js, HTML, CSS, Tailwind, Python, and Postman.",
+    "fourthDescription": "Designed wireframes and testing protocols with Figma and Postman.",
+    "color": "indigo",
+    "category": "Frontend"
+  }
+] 
