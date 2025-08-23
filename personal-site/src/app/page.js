@@ -55,7 +55,7 @@ export default function Home() {
             </div>
             
             <div className="text-left">
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-mono text-white mb-2 drop-shadow-2xl">Hello, I am Anish!</h1>
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-mono text-white mb-2 drop-shadow-2xl">Hi, I am Anish!</h1>
               <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold font-sans text-white drop-shadow-lg">Student, Developer, Innovator</h4>
             </div>
           </div>
