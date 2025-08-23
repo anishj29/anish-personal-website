@@ -86,41 +86,41 @@ export default function Experience() {
   };
 
   return (
-    <div className="pt-24 pb-24 experience-container w-full bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative overflow-hidden">
+    <div className="pt-16 sm:pt-24 pb-16 sm:pb-24 experience-container w-full bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
       
-      <div className="relative w-full px-6 sm:px-8 lg:px-12">
-        <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
+      <div className="relative w-full px-4 sm:px-6 lg:px-12">
+        <div className="text-center mb-16 sm:mb-20">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-4 sm:mb-6">
             Work Experience
           </h1>
         </div>
         
         <div className="relative max-w-6xl mx-auto">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 rounded-full"></div>
+          <div className="absolute left-2 sm:left-4 md:left-8 top-0 bottom-0 w-0.5 sm:w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-indigo-500 rounded-full"></div>
           
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {experienceData.map((experience, index) => {
               const colors = getColorClasses(experience.color);
               return (
                 <div 
                   key={experience.id}
-                  className={`experience-box relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 ml-16 transform transition-all duration-700 hover:scale-105 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl ${colors.shadow}`}
+                  className={`experience-box relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 sm:p-6 md:p-8 ml-4 sm:ml-8 md:ml-16 transform transition-all duration-700 hover:scale-105 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl ${colors.shadow}`}
                 >
-                  <div className={`absolute -left-12 top-8 w-8 h-8 bg-gradient-to-r ${colors.bg} rounded-full border-4 border-white shadow-lg`}></div>
+                  <div className={`absolute -left-3 sm:-left-6 md:-left-12 top-4 sm:top-6 md:top-8 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-gradient-to-r ${colors.bg} rounded-full border-2 sm:border-4 border-white shadow-lg`}></div>
                   
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <time className={`text-sm font-semibold ${colors.text} uppercase tracking-wide`}>
+                      <time className={`text-xs sm:text-sm font-semibold ${colors.text} uppercase tracking-wide`}>
                         {experience.period}
                       </time>
-                      <h3 className="text-2xl font-bold text-white mt-1">{experience.company}</h3>
-                      <h4 className={`text-lg font-medium ${colors.textLight}`}>{experience.position}</h4>
+                      <h3 className="text-xl sm:text-2xl font-bold text-white mt-1">{experience.company}</h3>
+                      <h4 className={`text-base sm:text-lg font-medium ${colors.textLight}`}>{experience.position}</h4>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <span className={`inline-block px-4 py-2 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-sm font-medium`}>
+                      <span className={`inline-block px-3 sm:px-4 py-2 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-sm font-medium`}>
                         {experience.category}
                       </span>
                     </div>
@@ -129,24 +129,24 @@ export default function Experience() {
                   <ul className="space-y-3 text-gray-200 leading-relaxed">
                     <li className="flex items-start gap-3">
                       <div className={`w-2 h-2 ${colors.dot} rounded-full mt-2 flex-shrink-0`}></div>
-                      <span>{experience.description}</span>
+                      <span className="text-sm sm:text-base">{experience.description}</span>
                     </li>
                     {experience.additionalDescription && (
                       <li className="flex items-start gap-3">
                         <div className={`w-2 h-2 ${colors.dot} rounded-full mt-2 flex-shrink-0`}></div>
-                        <span>{experience.additionalDescription}</span>
+                        <span className="text-sm sm:text-base">{experience.additionalDescription}</span>
                       </li>
                     )}
                     {experience.thirdDescription && (
                       <li className="flex items-start gap-3">
                         <div className={`w-2 h-2 ${colors.dot} rounded-full mt-2 flex-shrink-0`}></div>
-                        <span>{experience.thirdDescription}</span>
+                        <span className="text-sm sm:text-base">{experience.thirdDescription}</span>
                       </li>
                     )}
                     {experience.fourthDescription && (
                       <li className="flex items-start gap-3">
                         <div className={`w-2 h-2 ${colors.dot} rounded-full mt-2 flex-shrink-0`}></div>
-                        <span>{experience.fourthDescription}</span>
+                        <span className="text-sm sm:text-base">{experience.fourthDescription}</span>
                       </li>
                     )}
                   </ul>

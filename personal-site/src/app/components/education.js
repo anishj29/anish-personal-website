@@ -48,54 +48,54 @@ export default function Education() {
   };
 
   return (
-    <div className="pt-24 pb-24 education-container w-full bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white relative overflow-hidden">
+    <div className="pt-16 sm:pt-24 pb-16 sm:pb-24 education-container w-full bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
       
-      <div className="relative w-full px-6 sm:px-8 lg:px-12">
-        <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+      <div className="relative w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="text-center mb-12 sm:mb-20">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent mb-4 sm:mb-6">
             Education
           </h1>
         </div>
         
         <div className="relative max-w-6xl mx-auto">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 via-teal-500 to-cyan-500 rounded-full"></div>
+          <div className="absolute left-2 sm:left-4 md:left-8 top-0 bottom-0 w-0.5 sm:w-1 bg-gradient-to-b from-emerald-500 via-teal-500 to-cyan-500 rounded-full"></div>
           
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {educationData.map((education, index) => {
               const colors = getColorClasses(education.color);
               return (
                 <div 
                   key={education.id}
-                  className={`education-box relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 ml-16 transform transition-all duration-700 hover:scale-105 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl ${colors.shadow}`}
+                  className={`education-box relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 sm:p-6 md:p-8 ml-4 sm:ml-8 md:ml-16 transform transition-all duration-700 hover:scale-105 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl ${colors.shadow}`}
                 >
-                  <div className={`absolute -left-12 top-8 w-8 h-8 bg-gradient-to-r ${colors.bg} rounded-full border-4 border-white shadow-lg`}></div>
+                  <div className={`absolute -left-3 sm:-left-6 md:-left-12 top-4 sm:top-6 md:top-8 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-gradient-to-r ${colors.bg} rounded-full border-2 sm:border-4 border-white shadow-lg`}></div>
                   
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 sm:mb-6">
                     <div>
-                      <time className={`text-sm font-semibold ${colors.text} uppercase tracking-wide`}>
+                      <time className={`text-xs sm:text-sm font-semibold ${colors.text} uppercase tracking-wide`}>
                         {education.period}
                       </time>
-                      <h3 className="text-2xl font-bold text-white mt-1">{education.institution}</h3>
-                      <h4 className={`text-lg font-medium ${colors.textLight}`}>{education.degree}</h4>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mt-1">{education.institution}</h3>
+                      <h4 className={`text-base sm:text-lg font-medium ${colors.textLight}`}>{education.degree}</h4>
                     </div>
-                    <div className="mt-4 md:mt-0">
-                      <span className={`inline-block px-4 py-2 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-sm font-medium`}>
+                    <div className="mt-3 md:mt-0">
+                      <span className={`inline-block px-2 sm:px-3 md:px-4 py-1 sm:py-2 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-xs sm:text-sm font-medium`}>
                         {education.degree.includes('BSc') ? 'University' : 'High School'}
                       </span>
                     </div>
                   </div>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
                     {/* Majors and Minor */}
                     {education.majors && (
                       <div className="space-y-2">
-                        <h4 className="text-white font-semibold">Majors:</h4>
+                        <h4 className="text-white font-semibold text-sm sm:text-base">Majors:</h4>
                         <div className="flex flex-wrap gap-2">
                           {education.majors.map((major, idx) => (
-                            <span key={idx} className={`px-3 py-1 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-sm`}>
+                            <span key={idx} className={`px-2 sm:px-3 py-1 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-xs sm:text-sm`}>
                               {major}
                             </span>
                           ))}
@@ -105,10 +105,10 @@ export default function Education() {
                     
                     {education.minors && (
                       <div className="space-y-2">
-                        <h4 className="text-white font-semibold">Minors:</h4>
+                        <h4 className="text-white font-semibold text-sm sm:text-base">Minors:</h4>
                         <div className="flex flex-wrap gap-2">
                           {education.minors.map((minor, idx) => (
-                            <span key={idx} className={`px-3 py-1 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-sm`}>
+                            <span key={idx} className={`px-2 sm:px-3 py-1 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-xs sm:text-sm`}>
                               {minor}
                             </span>
                           ))}
@@ -118,10 +118,10 @@ export default function Education() {
                     
                     {/* Relevant Coursework */}
                     <div className="space-y-2">
-                      <h4 className="text-white font-semibold">Relevant Coursework:</h4>
+                      <h4 className="text-white font-semibold text-sm sm:text-base">Relevant Coursework:</h4>
                       <div className="flex flex-wrap gap-2">
                         {education.relevantCoursework.map((course, idx) => (
-                          <span key={idx} className={`px-3 py-1 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-sm`}>
+                          <span key={idx} className={`px-2 sm:px-3 py-1 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-xs sm:text-sm`}>
                             {course}
                           </span>
                         ))}
@@ -131,10 +131,10 @@ export default function Education() {
                     {/* Awards and Activities */}
                     {education.awardsAndActivities && (
                       <div className="space-y-2">
-                        <h4 className="text-white font-semibold">Awards & Activities:</h4>
+                        <h4 className="text-white font-semibold text-sm sm:text-base">Awards & Activities:</h4>
                         <div className="flex flex-wrap gap-2">
                           {education.awardsAndActivities.map((award, idx) => (
-                            <span key={idx} className={`px-3 py-1 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-sm`}>
+                            <span key={idx} className={`px-2 sm:px-3 py-1 ${colors.bgLight} border ${colors.border} rounded-full ${colors.textLight} text-xs sm:text-sm`}>
                               {award}
                             </span>
                           ))}

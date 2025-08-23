@@ -33,7 +33,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://linkedin.com/in/your-profile" 
+                href="https://linkedin.com/in/anishjha1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-110"
@@ -43,7 +43,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="mailto:your-email@example.com" 
+                href="mailto:anishj2900@gmail.com" 
                 className="p-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-110"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
