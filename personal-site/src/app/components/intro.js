@@ -107,10 +107,10 @@ export default function Intro() {
                   </p>
                   
                   <p className="text-base md:text-lg leading-6 md:leading-7 text-gray-200">
-                    In my most recent role, I'm working as an IT Utilities Technology Operations Intern at PSEG. 
+                    In my most recent role, I worked as an IT Intern at PSEG. 
                     Previously, I've worked as a Frontend Web Developer at Movement Labs, where I enhanced
                     the UI for blockchain partners, and as Chief Technology Officer at Vact, leading the
-                    development of mobile app features. In addition, I've worked on client projects through Fiverr,
+                    development of mobile app features. In addition, I've worked on client projects through Fiverr as a freelancefull-stack developer,
                     creating coding prep platforms and AI-integrated book catalogs.
                   </p>
                 </div>

@@ -3,8 +3,11 @@
     "id": 1,
     "period": "June 2025 - August 2025",
     "company": "PSEG",
-    "position": "IT Utilities Technology Operations Intern",
-    "description": "Managing and analyzing large operational and non-operational PI data sets for electric plant assets by creating 1,000+ PI tags and leveraging Python, SQL, internal AI tools, and LLMs for automated reporting, data validation, and system testing.",
+    "position": "IT Intern",
+    "description": "Designed and automated the creation of 4,000+ electric plant data tags using Python and SQL, significantly reducing manual tagging and improving data accessibility across operational/non-operational datasets for electric plant systems",
+    "additionalDescription": "Implemented Selenium regression tests to validate workflows end-to-end, shorten test cycles & prevent release regressions.",
+    "thirdDescription": "Cut QA time by 60% by partnering with engineers and analysts to deploy AI-powered validation tools, accelerating reporting timelines and data integrity for plant operations.",
+    "fourthDescription": "Built a lakehouse pipeline on AWS using S3, Glue (PySpark), Athena, and Redshift with schema evolution and partition projection, enabling scalable, interactive queries across millions of electric utility data points.",
     "color": "blue",
     "category": "Backend"
   },

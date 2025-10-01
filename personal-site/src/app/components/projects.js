@@ -13,6 +13,14 @@ const projects = [
     component: WebIcon,
   },
   {
+    name: "InvestSmart AI",
+    description:
+      "A web application that uses AI to analyze stock market data and provide investment recommendations. Built using React.js, Python, and Tailwind CSS.",
+    techStack: "React.js, Python, Gemini AI, Tailwind CSS",
+    url: "https://v0-investor-guidance-web-app.vercel.app/dashboard",
+    component: AttachMoneyIcon,
+  },
+  {
     name: "PDF Library",
     description:
       "An online PDF library built for high school students with features like annotation, chapter summaries, and character summaries. Built using Vue JS, Bootstrap 4, and Firebase Firestore.",
@@ -28,14 +36,6 @@ const projects = [
     url: "https://split-tawny.vercel.app/",
     component: AttachMoneyIcon,
   },
-  {
-    name: "InvestSmart AI",
-    description:
-      "A web application that uses AI to analyze stock market data and provide investment recommendations. Built using React.js, Python, and Tailwind CSS.",
-    techStack: "React.js, Python, Tailwind CSS",
-    url: "https://v0-investor-guidance-web-app.vercel.app/dashboard",
-    component: AttachMoneyIcon,
-  }
 ];
 
 export default function Projects() {
