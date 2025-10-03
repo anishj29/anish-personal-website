@@ -2,6 +2,7 @@ import WebIcon from '@mui/icons-material/Web';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import SchoolIcon from '@mui/icons-material/School';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 
 const projects = [
   {
@@ -39,8 +40,15 @@ const projects = [
 ];
 
 export default function Projects() {
+  const scrollToFooter = () => {
+    const footerSection = document.querySelector('.footer-section');
+    if (footerSection) {
+      footerSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="pt-16 sm:pt-24 pb-16 sm:pb-24 projects-container w-full bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+    <div className="projects-section pt-16 sm:pt-24 pb-16 sm:pb-24 projects-container w-full bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
       

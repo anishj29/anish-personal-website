@@ -6,7 +6,7 @@ import Experience from "./components/experience";
 import Projects from "./components/projects";
 import Footer from "./components/footer";
 import Spline from '@splinetool/react-spline';
-import { VoiceChat } from "@mui/icons-material";
+import { VoiceChat, KeyboardArrowDown } from "@mui/icons-material";
 import Volunteer from "./components/volunteer";
 
 export default function Home() {
@@ -14,6 +14,13 @@ export default function Home() {
 
   const handleSplineLoad = () => {
     setSplineLoaded(true);
+  };
+
+  const scrollToIntro = () => {
+    const introSection = document.querySelector('.intro-section');
+    if (introSection) {
+      introSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   // Preload the Spline scene
@@ -38,13 +45,12 @@ export default function Home() {
             scene="https://prod.spline.design/VwwmjsK-wk5ymozv/scene.splinecode"
             className="w-full h-full"
             onLoad={handleSplineLoad}
-            loadingFallback={null}
             style={{ width: '100%', height: '100%' }}
           />
         </div>
         
         {/* Hero Content Overlay */}
-        <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 z-10 ${splineLoaded ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 z-10 ${splineLoaded ? 'opacity-100' : 'opacity-0'}`}>
           <div className="text-white text-center flex flex-row items-center justify-center px-4 md:px-0">
             <div className="flex flex-col items-center mr-3 md:mr-10">
               <img
@@ -59,6 +65,15 @@ export default function Home() {
               <h4 className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl font-bold font-sans text-white drop-shadow-lg">Student, Developer, Innovator</h4>
             </div>
           </div>
+          
+          {/* Scroll Arrow */}
+          <button
+            onClick={scrollToIntro}
+            className="absolute bottom-8 md:bottom-12 text-white hover:text-blue-300 transition-colors duration-300 animate-bounce cursor-pointer"
+            aria-label="Scroll to introduction section"
+          >
+            <KeyboardArrowDown className="text-4xl md:text-5xl drop-shadow-lg" />
+          </button>
         </div>
       </div>
 

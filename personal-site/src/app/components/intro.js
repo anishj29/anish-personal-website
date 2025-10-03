@@ -5,10 +5,18 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DownloadIcon from '@mui/icons-material/Download';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 
 export default function Intro() {
+  const scrollToEducation = () => {
+    const educationSection = document.querySelector('.education-section');
+    if (educationSection) {
+      educationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 py-16 md:py-24 lg:py-32 w-full relative overflow-hidden">
+    <div className="intro-section bg-gradient-to-br from-slate-900 via-gray-900 to-black py-16 md:py-24 lg:py-32 w-full relative overflow-hidden">
       {/* Subtle background accent */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-blue-400 rounded-full blur-3xl"></div>
@@ -27,7 +35,7 @@ export default function Intro() {
               </div>
               
               <div className="space-y-3 md:space-y-4 lg:space-y-5">
-                <div className="flex items-center space-x-3 md:space-x-4 p-3 md:p-4 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
+                <div className="flex items-center space-x-3 md:space-x-4 px-3 md:px-4 py-2 md:py-2.5 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
                   <div className="p-2 md:p-2.5 bg-blue-500/20 rounded-lg md:rounded-xl group-hover:bg-blue-500/30 transition-colors duration-300">
                     <EmailIcon className="text-blue-300 text-base md:text-lg" />
                   </div>
@@ -41,14 +49,14 @@ export default function Intro() {
                   </a>
                 </div>
                 
-                <div className="flex items-center space-x-3 md:space-x-4 p-3 md:p-4 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
+                <div className="flex items-center space-x-3 md:space-x-4 px-3 md:px-4 py-2 md:py-2.5 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
                   <div className="p-2 md:p-2.5 bg-green-500/20 rounded-lg md:rounded-xl group-hover:bg-green-500/30 transition-colors duration-300">
                     <PhoneIcon className="text-green-300 text-base md:text-lg" />
                   </div>
                   <span className="text-gray-200 font-medium flex-1 text-sm md:text-base">609-454-1784</span>
                 </div>
                 
-                <div className="flex items-center space-x-3 md:space-x-4 p-3 md:p-4 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
+                <div className="flex items-center space-x-3 md:space-x-4 px-3 md:px-4 py-2 md:py-2.5 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
                   <div className="p-2 md:p-2.5 bg-blue-500/20 rounded-lg md:rounded-xl group-hover:bg-blue-500/30 transition-colors duration-300">
                     <LinkedInIcon className="text-blue-300 text-base md:text-lg" />
                   </div>
@@ -62,7 +70,7 @@ export default function Intro() {
                   </a>
                 </div>
                 
-                <div className="flex items-center space-x-3 md:space-x-4 p-3 md:p-4 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
+                <div className="flex items-center space-x-3 md:space-x-4 px-3 md:px-4 py-2 md:py-2.5 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
                   <div className="p-2 md:p-2.5 bg-gray-500/20 rounded-lg md:rounded-xl group-hover:bg-gray-500/30 transition-colors duration-300">
                     <GitHubIcon className="text-gray-300 text-base md:text-lg" />
                   </div>
@@ -76,7 +84,7 @@ export default function Intro() {
                   </a>
                 </div>
 
-                <div className="flex items-center space-x-3 md:space-x-4 p-3 md:p-4 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
+                <div className="flex items-center space-x-3 md:space-x-4 px-3 md:px-4 py-2 md:py-2.5 bg-white/5 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-white/10 transition-all duration-300 group-hover:shadow-lg border border-white/10">
                   <div className="p-2 md:p-2.5 bg-purple-500/20 rounded-lg md:rounded-xl group-hover:bg-purple-500/30 transition-colors duration-300">
                     <DownloadIcon className="text-purple-300 text-base md:text-lg" />
                   </div>
@@ -131,6 +139,17 @@ export default function Intro() {
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Scroll Arrow */}
+        <div className="flex justify-center mt-8 md:mt-12">
+          <button
+            onClick={scrollToEducation}
+            className="text-white hover:text-blue-300 transition-colors duration-300 animate-bounce cursor-pointer"
+            aria-label="Scroll to education section"
+          >
+            <KeyboardArrowDown className="text-4xl md:text-5xl drop-shadow-lg" />
+          </button>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div className="footer w-full bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white relative overflow-hidden">
+    <div className="footer-section footer w-full bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-black opacity-30"></div>
       <div className="absolute top-0 left-0 w-full h-full">

@@ -1,7 +1,15 @@
 'use client';
 import React, { useEffect } from 'react';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 
 export default function Volunteer() {
+  const scrollToProjects = () => {
+    const projectsSection = document.querySelector('.projects-section');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const boxes = document.querySelectorAll('.volunteer-box');
 
@@ -25,7 +33,7 @@ export default function Volunteer() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 py-16 sm:py-24 w-full relative overflow-hidden">
+    <div className="volunteer-section bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 py-16 sm:py-24 w-full relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-40 h-40 bg-purple-400 rounded-full blur-3xl"></div>
@@ -97,6 +105,17 @@ export default function Volunteer() {
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Scroll Arrow */}
+        <div className="flex justify-center mt-8 md:mt-12">
+          <button
+            onClick={scrollToProjects}
+            className="text-white hover:text-purple-300 transition-colors duration-300 animate-bounce cursor-pointer"
+            aria-label="Scroll to projects section"
+          >
+            <KeyboardArrowDown className="text-4xl md:text-5xl drop-shadow-lg" />
+          </button>
         </div>
       </div>
     </div>

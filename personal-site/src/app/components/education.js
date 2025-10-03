@@ -1,8 +1,16 @@
 'use client';
 import React, { useEffect } from 'react';
 import educationData from '../data/education.json';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 
 export default function Education() {
+  const scrollToExperience = () => {
+    const experienceSection = document.querySelector('.experience-section');
+    if (experienceSection) {
+      experienceSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const boxes = document.querySelectorAll('.education-box');
 
@@ -48,7 +56,7 @@ export default function Education() {
   };
 
   return (
-    <div className="pt-16 sm:pt-24 pb-16 sm:pb-24 education-container w-full bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white relative overflow-hidden">
+    <div className="education-section pt-16 sm:pt-24 pb-16 sm:pb-24 education-container w-full bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
       
@@ -146,6 +154,17 @@ export default function Education() {
               );
             })}
           </div>
+        </div>
+        
+        {/* Scroll Arrow */}
+        <div className="flex justify-center mt-8 md:mt-12">
+          <button
+            onClick={scrollToExperience}
+            className="text-white hover:text-emerald-300 transition-colors duration-300 animate-bounce cursor-pointer"
+            aria-label="Scroll to experience section"
+          >
+            <KeyboardArrowDown className="text-4xl md:text-5xl drop-shadow-lg" />
+          </button>
         </div>
       </div>
     </div>

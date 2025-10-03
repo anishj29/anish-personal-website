@@ -1,8 +1,16 @@
 'use client';
 import React, { useEffect } from 'react';
 import experienceData from '../data/experience.json';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 
 export default function Experience() {
+  const scrollToVolunteer = () => {
+    const volunteerSection = document.querySelector('.volunteer-section');
+    if (volunteerSection) {
+      volunteerSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const boxes = document.querySelectorAll('.experience-box');
 
@@ -86,7 +94,7 @@ export default function Experience() {
   };
 
   return (
-    <div className="pt-16 sm:pt-24 pb-16 sm:pb-24 experience-container w-full bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative overflow-hidden">
+    <div className="experience-section pt-16 sm:pt-24 pb-16 sm:pb-24 experience-container w-full bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
       
@@ -154,6 +162,17 @@ export default function Experience() {
               );
             })}
           </div>
+        </div>
+        
+        {/* Scroll Arrow */}
+        <div className="flex justify-center mt-8 md:mt-12">
+          <button
+            onClick={scrollToVolunteer}
+            className="text-white hover:text-blue-300 transition-colors duration-300 animate-bounce cursor-pointer"
+            aria-label="Scroll to volunteer section"
+          >
+            <KeyboardArrowDown className="text-4xl md:text-5xl drop-shadow-lg" />
+          </button>
         </div>
       </div>
     </div>
