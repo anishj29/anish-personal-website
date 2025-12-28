@@ -18,7 +18,7 @@ const projects = [
     description:
       "A web application that uses AI to analyze stock market data and provide investment recommendations. Built using React.js, Python, and Tailwind CSS.",
     techStack: "React.js, Python, Gemini AI, Tailwind CSS",
-    url: "https://v0-investor-guidance-web-app.vercel.app/dashboard",
+    url: "https://www.usecompound.dev/",
     component: AttachMoneyIcon,
   },
   {

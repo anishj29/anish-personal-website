@@ -15,6 +15,18 @@ export default function Intro() {
     }
   };
 
+  const handleDownloadResume = (e) => {
+    e.preventDefault();
+    const link = document.createElement('a');
+    link.href = 'https://anish-jha-personal-site.s3.us-east-1.amazonaws.com/Anish_Jha_Resume.pdf';
+    link.download = 'Anish_Jha_Resume.pdf';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="intro-section bg-gradient-to-br from-slate-900 via-gray-900 to-black py-16 md:py-24 lg:py-32 w-full relative overflow-hidden">
       {/* Subtle background accent */}
@@ -88,13 +100,12 @@ export default function Intro() {
                   <div className="p-2 md:p-2.5 bg-purple-500/20 rounded-lg md:rounded-xl group-hover:bg-purple-500/30 transition-colors duration-300">
                     <DownloadIcon className="text-purple-300 text-base md:text-lg" />
                   </div>
-                  <a
-                    className="text-gray-200 hover:text-purple-300 font-medium transition-colors duration-200 flex-1 text-sm md:text-base"
-                    href="/Anish_Jha_Resume.pdf"
-                    download="Anish_Jha_Resume.pdf"
+                  <button
+                    onClick={handleDownloadResume}
+                    className="text-gray-200 hover:text-purple-300 font-medium transition-colors duration-200 flex-1 text-sm md:text-base text-left cursor-pointer"
                   >
                     Download Resume
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
