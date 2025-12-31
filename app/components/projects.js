@@ -2,6 +2,7 @@ import WebIcon from '@mui/icons-material/Web';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import SchoolIcon from '@mui/icons-material/School';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import PsychologyIcon from '@mui/icons-material/Psychology';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 
 const projects = [
@@ -30,12 +31,12 @@ const projects = [
     component: PictureAsPdfIcon,
   },
   {
-    name: "Split App",
+    name: "Rememb-AR",
     description:
-      "A mobile app that enables users to split their bills/expenses by scanning or entering them manually. Built using React Native, Tailwind CSS, and Kotlin.",
-    techStack: "React Native, Tailwind CSS, Kotlin",
-    url: "https://split-tawny.vercel.app/",
-    component: AttachMoneyIcon,
+      "An iOS app that helps people with Alzheimer's reconnect with memories through AR and AI. Users explore a virtual memory garden where each flower is linked to photos and adaptive recall surveys.",
+    techStack: "Swift, ARKit, Firebase, Gemini AI, Python",
+    url: "https://devpost.com/software/rememb-ar",
+    component: PsychologyIcon,
   },
 ];
 
@@ -48,7 +49,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="projects-section pt-16 sm:pt-24 pb-16 sm:pb-24 projects-container w-full bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+    <div className="projects-section pt-16 sm:pt-24 pb-16 sm:pb-24 projects-container w-full bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white relative overflow-visible">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-black opacity-10"></div>
       
@@ -62,14 +63,14 @@ export default function Projects() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 py-4">
           {projects.map((project, index) => (
             <a
               key={index}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 sm:p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl hover:shadow-cyan-500/25"
+              className="group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 sm:p-8 transform transition-all duration-500 hover:scale-105 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl hover:shadow-cyan-500/25 z-10"
             >
               {/* Gradient border effect */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

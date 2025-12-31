@@ -53,45 +53,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="text-center md:text-left">
-            <h4 className="text-lg font-semibold text-white mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              <li>
-                <a 
-                  href="#projects" 
-                  className="text-gray-300 hover:text-white transition-colors duration-300 hover:underline"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#experience" 
-                  className="text-gray-300 hover:text-white transition-colors duration-300 hover:underline"
-                >
-                  Experience
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#education" 
-                  className="text-gray-300 hover:text-white transition-colors duration-300 hover:underline"
-                >
-                  Education
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#volunteer" 
-                  className="text-gray-300 hover:text-white transition-colors duration-300 hover:underline"
-                >
-                  Volunteer Work
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold text-white mb-6">Get In Touch</h4>

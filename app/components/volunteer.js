@@ -42,7 +42,7 @@ export default function Volunteer() {
       
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 z-10">
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
             Volunteering Experience
           </h1>
         </div>
