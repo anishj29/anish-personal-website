@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^3.0.75",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.5",
     "@mui/material": "^6.1.5",
+    "@pinecone-database/pinecone": "^7.2.0",
     "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.10.51",
+    "ai": "^6.0.185",
+    "dotenv": "^17.4.2",
     "next": "15.1.11",
+    "pdf-parse": "^2.4.5",
     "react": "^18",
     "react-dom": "^18"
   },
