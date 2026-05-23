@@ -8,6 +8,7 @@ import Footer from "./components/footer";
 import Spline from '@splinetool/react-spline';
 import { VoiceChat, KeyboardArrowDown } from "@mui/icons-material";
 import Volunteer from "./components/volunteer";
+import PortfolioChat from "./components/portfolio-chat";
 
 export default function Home() {
   const [splineLoaded, setSplineLoaded] = useState(false);
@@ -82,6 +83,7 @@ export default function Home() {
       <Experience />
       <Volunteer />
       <Projects />
+      <PortfolioChat />
       <Footer />
     </div>
   );

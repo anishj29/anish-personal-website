@@ -1,53 +1,22 @@
 import WebIcon from '@mui/icons-material/Web';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import SchoolIcon from '@mui/icons-material/School';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import PsychologyIcon from '@mui/icons-material/Psychology';
-import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import projectsData from '../data/projects.json';
 
-const projects = [
-  {
-    name: "Personal Website",
-    description:
-      "My personal website built from scratch using React JS, Next JS, and Tailwind CSS.",
-    techStack: "React.js, Next.js, Tailwind CSS",
-    url: "https://github.com/anishj29/anish-personal-website",
-    component: WebIcon,
-  },
-  {
-    name: "InvestSmart AI",
-    description:
-      "A web application that uses AI to analyze stock market data and provide investment recommendations. Built using React.js, Python, and Tailwind CSS.",
-    techStack: "React.js, Python, Gemini AI, Tailwind CSS",
-    url: "https://www.usecompound.dev/",
-    component: AttachMoneyIcon,
-  },
-  {
-    name: "PDF Library",
-    description:
-      "An online PDF library built for high school students with features like annotation, chapter summaries, and character summaries. Built using Vue JS, Bootstrap 4, and Firebase Firestore.",
-    techStack: "Vue JS, Bootstrap, Firebase",
-    url: "https://pdf-library.vercel.app/",
-    component: PictureAsPdfIcon,
-  },
-  {
-    name: "Rememb-AR",
-    description:
-      "An iOS app that helps people with Alzheimer's reconnect with memories through AR and AI. Users explore a virtual memory garden where each flower is linked to photos and adaptive recall surveys.",
-    techStack: "Swift, ARKit, Firebase, Gemini AI, Python",
-    url: "https://devpost.com/software/rememb-ar",
-    component: PsychologyIcon,
-  },
-];
+const ICON_MAP = {
+  web: WebIcon,
+  pdf: PictureAsPdfIcon,
+  money: AttachMoneyIcon,
+  psychology: PsychologyIcon,
+};
+
+const projects = projectsData.map((project) => ({
+  ...project,
+  component: ICON_MAP[project.icon],
+}));
 
 export default function Projects() {
-  const scrollToFooter = () => {
-    const footerSection = document.querySelector('.footer-section');
-    if (footerSection) {
-      footerSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="projects-section pt-16 sm:pt-24 pb-16 sm:pb-24 projects-container w-full bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white relative overflow-visible">
       {/* Background decoration */}
@@ -64,9 +33,9 @@ export default function Projects() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 py-4">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <a
-              key={index}
+              key={project.url}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"

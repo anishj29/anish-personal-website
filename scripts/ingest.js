@@ -1,10 +1,10 @@
 import { Pinecone } from '@pinecone-database/pinecone';
 import { google } from '@ai-sdk/google';
 import { embedMany } from 'ai';
-import pdfParse from 'pdf-parse';
+import { PDFParse } from 'pdf-parse';
 import dotenv from 'dotenv';
 
-dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
 
 async function ingestResume() {
   console.log('1. Downloading resume from S3...');
@@ -13,8 +13,14 @@ async function ingestResume() {
   const buffer = Buffer.from(arrayBuffer);
 
   console.log('2. Extracting text from PDF...');
-  const pdfData = await pdfParse(buffer);
-  const fullText = pdfData.text;
+  const parser = new PDFParse({ data: buffer });
+  let fullText;
+  try {
+    const pdfData = await parser.getText();
+    fullText = pdfData.text;
+  } finally {
+    await parser.destroy();
+  }
 
   console.log('3. Chunking text...');
   const chunks = fullText
@@ -26,8 +32,14 @@ async function ingestResume() {
 
   console.log('4. Generating embeddings via Gemini...');
   const { embeddings } = await embedMany({
-    model: google.textEmbeddingModel('text-embedding-004'),
+    model: google.embedding('gemini-embedding-001'),
     values: chunks,
+    providerOptions: {
+      google: {
+        outputDimensionality: 768,
+        taskType: 'RETRIEVAL_DOCUMENT',
+      },
+    },
   });
 
   console.log('5. Connecting to Pinecone...');
@@ -45,7 +57,7 @@ async function ingestResume() {
   }));
 
   console.log('7. Upserting vectors to Pinecone...');
-  await index.upsert(records);
+  await index.upsert({ records });
 
   console.log('✅ Success! Your resume is now live in Pinecone (768 dimensions).');
 }

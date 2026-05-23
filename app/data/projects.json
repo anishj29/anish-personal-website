@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Compound AI",
+    "description": "A web application that uses AI to analyze stock market data and provide investment recommendations. Built using React.js, Python, and Tailwind CSS.",
+    "techStack": "React.js, Python, Gemini AI, Tailwind CSS",
+    "url": "https://www.usecompound.dev/",
+    "icon": "money"
+  },
+  {
+    "name": "Rememb-AR",
+    "description": "An iOS app that helps people with Alzheimer's reconnect with memories through AR and AI. Users explore a virtual memory garden where each flower is linked to photos and adaptive recall surveys.",
+    "techStack": "Swift, ARKit, Firebase, Gemini AI, Python",
+    "url": "https://devpost.com/software/rememb-ar",
+    "icon": "psychology"
+  },
+  {
+    "name": "Personal Website",
+    "description": "My personal website built from scratch using React JS, Next JS, and Tailwind CSS.",
+    "techStack": "React.js, Next.js, Tailwind CSS",
+    "url": "https://github.com/anishj29/anish-personal-website",
+    "icon": "web"
+  },
+  {
+    "name": "PDF Library",
+    "description": "An online PDF library built for high school students with features like annotation, chapter summaries, and character summaries. Built using Vue JS, Bootstrap 4, and Firebase Firestore.",
+    "techStack": "Vue JS, Bootstrap, Firebase",
+    "url": "https://pdf-library.vercel.app/",
+    "icon": "pdf"
+  }
+]
