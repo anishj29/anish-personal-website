@@ -1,6 +1,20 @@
 [
   {
     "id": 1,
+    "period": "May 2026 - Present",
+    "company": "Wells Fargo",
+    "position": "SWE Intern",
+    "description": "Built the data and inputs dashboard for an AI-driven workforce forecasting platform in Enterprise Functions Technology, serving the CFO organization and used for headcount planning across all lines of business (Angular, Java/Spring Boot, SQL).",
+    "additionalDescription": "Exposed weekly batch ingestion health across 6 source systems including Workday, surfacing job status for the pipelines feeding the in-house forecasting engine and its AI-generated insights layer.",
+    "thirdDescription": "Provided executive stakeholders direct visibility into why a run failed or degraded, replacing ad hoc SQL checks previously required to answer questions about data reliability behind published forecasts.",
+    "fourthDescription": "Developing the backend service for a drilldown feature in the Base Forecast dashboard that decomposes each aggregated line item into the dynamic drivers producing it, letting analysts trace a forecast figure back to its underlying factors.",
+    "fifthDescription": "Authored 40+ Playwright end-to-end tests covering full dashboard functionality across the AI-driven workforce forecasting platform, protecting core user flows through UAT releases.",
+    "sixthDescription": "Leveraged GitHub Copilot and internal AI agents to accelerate development workflows and rapidly ship enterprise features.",
+    "color": "blue",
+    "category": "Full-Stack"
+  },
+  {
+    "id": 2,
     "period": "June 2025 - August 2025",
     "company": "PSEG",
     "position": "IT Intern",
@@ -12,7 +26,7 @@
     "category": "Backend"
   },
   {
-    "id": 2,
+    "id": 3,
     "period": "May 2024 - September 2024",
     "company": "Nao Now",
     "position": "Operations Intern",
@@ -23,7 +37,7 @@
     "category": "Operations"
   },
   {
-    "id": 3,
+    "id": 4,
     "period": "June 2024 - August 2024",
     "company": "Movement Labs",
     "position": "Frontend Web Developer Intern",
@@ -34,7 +48,7 @@
     "category": "Frontend"
   },
   {
-    "id": 4,
+    "id": 5,
     "period": "December 2021 - May 2024",
     "company": "Fiverr",
     "position": "Freelance Full-Stack Web Developer",
@@ -44,7 +58,7 @@
     "category": "Full-Stack"
   },
   {
-    "id": 5,
+    "id": 6,
     "period": "January 2022 - December 2022",
     "company": "Vact",
     "position": "Co-Founder & Technology Lead",
@@ -55,7 +69,7 @@
     "category": "CTO"
   },
   {
-    "id": 6,
+    "id": 7,
     "period": "November 2020 - May 2021",
     "company": "Ensemble Education",
     "position": "Frontend Web Developer",
@@ -63,4 +77,4 @@
     "color": "indigo",
     "category": "Frontend"
   }
-] 
+]

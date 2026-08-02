@@ -11,13 +11,7 @@
   "dependencies": {
     "@ai-sdk/google": "^3.0.75",
     "@ai-sdk/react": "^3.0.189",
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^6.1.5",
-    "@mui/material": "^6.1.5",
     "@pinecone-database/pinecone": "^7.2.0",
-    "@splinetool/react-spline": "^4.1.0",
-    "@splinetool/runtime": "^1.10.51",
     "@upstash/ratelimit": "^2.0.8",
     "@upstash/redis": "^1.38.0",
     "@vercel/kv": "^3.0.0",
@@ -29,7 +23,11 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/node": "^22.20.1",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.9.3"
   }
 }

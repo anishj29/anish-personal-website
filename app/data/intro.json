@@ -1,0 +1,33 @@
+{
+  "name": "Anish Jha",
+  "title": "Computer Science Student",
+  "email": "anishj2900@gmail.com",
+  "phone": "609-454-1784",
+  "linkedin": {
+    "url": "http://linkedin.com/in/anishjha1",
+    "label": "linkedin.com/in/anishjha1"
+  },
+  "github": {
+    "url": "http://github.com/anishj29",
+    "label": "github.com/anishj29"
+  },
+  "resume": {
+    "url": "https://anish-jha-personal-site.s3.us-east-1.amazonaws.com/Anish_Jha_Resume.pdf",
+    "filename": "Anish_Jha_Resume.pdf",
+    "label": "Download Resume"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "paragraphs": [
+      "I'm a Computer Science major at Rutgers, with a dual minor in Data Science and Business Administration, and I work mostly in Python, Java, TypeScript, and React.",
+      "Right now I'm a Software Engineering Intern at Wells Fargo on the Enterprise Functions Technology team, where I build dashboards for an AI-driven workforce forecasting platform used by the CFO organization for headcount planning. Before that I was an IT Intern at PSEG, where I automated the creation of 4,000+ electric plant data tags and built a lakehouse pipeline on AWS. Earlier, I worked as a Frontend SWE Intern at Movement Labs improving performance on Axial's DeFi frontend, and as Co-Founder & Technology Lead at Vact, shipping features for our mobile app on both app stores.",
+      "I'm also co-building Compound AI, a trading-focused platform with 40+ active users that generates personalized investment plans and financial insights. A lot of my work there has been on the retrieval pipeline and guardrails layer that keep the AI's recommendations grounded and explainable."
+    ]
+  },
+  "beyondTheCode": {
+    "title": "Beyond the Code",
+    "paragraphs": [
+      "Outside of work I'm involved in Rutgers Mobile App Development and the Competitive Programming club, both of which keep my problem solving sharp. I like hackathons a lot: my team won first place at HackRU 2024 with a heat-map app analyzing overlap between poverty and pollution data, and more recently I built Rememb-AR at HackPrinceton, an iOS AR app that helps Alzheimer's patients prioritize and recall memories. In my free time I'm usually deep in a personal project or picking up something new."
+    ]
+  }
+}

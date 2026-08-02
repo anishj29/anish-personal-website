@@ -6,7 +6,7 @@
     "degree": "BSc Degree",
     "majors": ["Computer Science"],
     "minors": ["Business Administration", "Data Science"],
-    "relevantCoursework": ["Calculus 1", "Data Structures", "Data 101", "Intro to Linear Algebra", "Intro to Financial Accounting"],
+    "relevantCoursework": ["Computer Architecture", "Calculus 2", "Data Structures", "Intro to Linear Algebra", "Intro to Financial Accounting"],
     "awardsAndActivities": ["Dean's List", "RU MAD", "RU BITS", "Rutgers Competitive Programming"],
     "color": "blue"
   },

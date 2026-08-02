@@ -8,12 +8,9 @@ A single-page personal portfolio built with Next.js. The site showcases educatio
 
 | Technology | Role |
 |------------|------|
-| [Tailwind CSS](https://tailwindcss.com/) 3.4 | Utility-first styling, layouts, gradients, and responsive breakpoints |
-| [Material UI (MUI)](https://mui.com/) 6 | Icons (`@mui/icons-material`) and component primitives |
-| [Emotion](https://emotion.sh/) | CSS-in-JS styling layer used by MUI |
-| [Spline](https://spline.design/) | Interactive 3D hero background (`@splinetool/react-spline`) |
-| [Geist](https://vercel.com/font) | Local variable fonts (`GeistVF`, `GeistMonoVF`) via `next/font/local` |
-| Custom CSS | Global theme variables, scroll animations, and section transitions in `app/globals.css` |
+| [Tailwind CSS](https://tailwindcss.com/) 3.4 | Utility-first styling, layouts, and responsive breakpoints |
+| [Newsreader](https://fonts.google.com/specimen/Newsreader) + [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) | Display and UI fonts via `next/font/google` |
+| Custom CSS | Design tokens, timeline, scroll reveal in `app/globals.css` |
 
 ### 2. Frontend
 
@@ -21,23 +18,22 @@ A single-page personal portfolio built with Next.js. The site showcases educatio
 |------------|------|
 | [Next.js](https://nextjs.org/) 15.1 | App Router, SSR/SSG, routing, and production builds |
 | [React](https://react.dev/) 18 | UI components (client components with `"use client"`) |
-| JavaScript | Application code (`.js` files, no TypeScript) |
+| TypeScript | Application code (`.ts` / `.tsx` files) |
 | [PostCSS](https://postcss.org/) | Processes Tailwind via `postcss.config.mjs` |
 | Static JSON | Content for education and experience in `app/data/` |
-| Path aliases | `@/*` maps to `./app/*` (see `jsconfig.json`) |
+| Path aliases | `@/*` maps to `./*` (see `tsconfig.json`) |
 
 ### 3. Backend
 
 This project does **not** run a separate backend service. Server responsibilities are handled entirely by Next.js:
 
-- **Rendering**: Server and client components via the Next.js App Router
-- **Static assets**: Built-in static file serving from `public/` (if used) and the Next.js build output
-- **No API routes**: There is no `app/api/` directory; the site does not expose custom REST or GraphQL endpoints
+- **No separate backend service**: Server responsibilities are handled by Next.js App Router
+- **API route**: `app/api/chat` powers the portfolio chat widget (RAG over resume embeddings)
 
 **External services** (not run locally):
 
-- **Spline CDN** — hosts the 3D scene (`prod.spline.design`)
 - **AWS S3** — profile image, resume PDF, and other media (`anish-jha-personal-site.s3.us-east-1.amazonaws.com`)
+- **Pinecone / Google AI / Vercel KV** — power the portfolio chat RAG API when configured via env vars
 
 ### 4. Database
 
@@ -144,9 +140,10 @@ app/
 ├── components/     # React sections (intro, education, experience, etc.)
 ├── data/           # Static JSON content
 ├── fonts/          # Geist local font files
+├── types/          # Shared TypeScript types
 ├── globals.css     # Tailwind directives and custom styles
-├── layout.js       # Root layout, fonts, metadata
-└── page.js         # Home page
+├── layout.tsx      # Root layout, fonts, metadata
+└── page.tsx        # Home page
 ```
 
 ---
