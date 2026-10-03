@@ -20,7 +20,7 @@
     "title": "About Me",
     "paragraphs": [
       "I'm a Computer Science major at Rutgers, with a dual minor in Data Science and Business Administration, and I work mostly in Python, Java, TypeScript, and React.",
-      "Right now I'm a Software Engineering Intern at Wells Fargo on the Enterprise Functions Technology team, where I build dashboards for an AI-driven workforce forecasting platform used by the CFO organization for headcount planning. Before that I was an IT Intern at PSEG, where I automated the creation of 4,000+ electric plant data tags and built a lakehouse pipeline on AWS. Earlier, I worked as a Frontend SWE Intern at Movement Labs improving performance on Axial's DeFi frontend, and as Co-Founder & Technology Lead at Vact, shipping features for our mobile app on both app stores.",
+      "Previously, I was a Software Engineering Intern at Wells Fargo on the Enterprise Functions Technology team, where I build dashboards for an AI-driven workforce forecasting platform used by the CFO organization for headcount planning. Before that I was an IT Intern at PSEG, where I automated the creation of 4,000+ electric plant data tags and built a lakehouse pipeline on AWS. Earlier, I worked as a Frontend SWE Intern at Movement Labs improving performance on Axial's DeFi frontend, and as Co-Founder & Technology Lead at Vact, shipping features for our mobile app on both app stores.",
       "I'm also co-building Compound AI, a trading-focused platform with 40+ active users that generates personalized investment plans and financial insights. A lot of my work there has been on the retrieval pipeline and guardrails layer that keep the AI's recommendations grounded and explainable."
     ]
   },
